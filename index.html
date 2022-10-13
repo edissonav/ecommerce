@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Academlo Store</title>
+</head>
+<body>
+
+  <div id="loader" class="loader">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="loader--img">
+        <title>Academlo Logo</title>
+        <g>
+            <g>
+                <path
+                d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+                </path>
+                <path
+                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                </path>
+            </g>
+        </g>
+    </svg>
+</div>
+<header class="header">
+  
+    <nav class="contenedor-nav">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo-academlo" >
+      <title>Academlo Logo</title>
+      <g>
+        <g >
+          <path
+            d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+          </path>
+        </g>
+      </g>
+      </svg>
+      <div class="contenedor-menu">
+        <ul class="lista-nav">
+        <li class="item-nav" id="store">STORE</li>
+        <Li class="item-nav" id="home">Home</Li>
+        <li class="item-nav" id="products">Products</li>
+      </ul>
+      </div>
+      <div class="btns-nav">
+        <i class='bx bx-moon bx-lg' id="moon-btn"></i>
+        <div class="contenedor-cart" id="contenedor--cart">
+          <i class='bx bx-shopping-bag bx-lg'></i>
+          <span class="counter-items">0</span>
+        </div>
+      </div>
+    </nav>
+    <div class="cart--container hide" id="cart-container">
+      <div class="cart" id="cart">
+        <div class="close--cart" >
+        <i class='bx bx-exit bx-lg'  id="close-cart">
+
+        </i>
+        </div>
+        <section class="cosas-carrito" id="cosas--carrito">
+          <h2>My cart</h2>
+          <div>
+            <img src="./assets/images/empty-cart.png" alt="">
+          </div>
+          <h3>Your cart is empty</h3>
+          <p>you can add items to Your cart by pressing the + button in the product page</p>
+
+        </section>
+        <div class="total-info-inside">
+          <span class="counter-items_inside">
+            0 items
+          </span>
+          <span class="total">
+            $0.00
+          </span>
+        </div>
+      </div>
+      
+    </div>
+    
+
+  
+</header>
+
+
+
+<main class="main">
+
+    <section class="home" id="home">
+      <div class="home__container container grid">
+        <div class="home__img-bg">
+          <img src="./assets/images/home.png" alt="" class="home__img">
+        </div>
+
+        <div class="home__data">
+          <h1 class="home__title">New Sweatshirt <br> COLLECTIONS 2022</h1>
+          <p class="home__description">
+            Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported from the 2022 series, with a modern
+            design.
+          </p>
+          <span class="home__price">$14.00</span>
+
+          <div class="home__btns">
+            <a href="#" class="button button--gray button--small">
+              Discover
+            </a>
+
+            <button class="button home__button">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      <div class="products__container ">
+        <ul class="products__filters">
+          <li class="products__item " >
+            <h3 class="products__title">
+              Show All
+            </h3>
+            <span class="products__stock">
+              show all products
+            </span>
+          </li>
+
+          <li class="products__item product_line" >
+            <h3 class="products__title">
+              Hoodies
+            </h3>
+            <span class="products__stock">
+              3 products
+            </span>
+          </li>
+
+          <li class="products__item product_line " >
+            <h3 class="products__title">
+              Shirts
+            </h3>
+            <span class="products__stock">
+              4 products
+            </span>
+          </li>
+
+          <li class="products__item product_line" data-filter=".sweatshirts">
+            <h3 class="products__title">
+              Sweatshirts
+            </h3>
+            <span class="products__stock">
+              4 products
+            </span>
+          </li>
+        </ul>
+      </div>
+
+  <section id="lista-productos">
+    
+
+  </section>
+</main>
+
+<footer class="footer section">
+  <div class="footer__container container grid">
+    <div class="footer__content">
+      <h3 class="footer__title">Our information</h3>
+
+      <ul class="footer__list">
+        <li>Guayaquil - Ecuador</li>
+      </ul>
+    </div>
+    <div class="footer__content">
+      <h3 class="footer__title">About Us</h3>
+
+      <ul class="footer__links">
+        <li>
+          <a href="#" class="footer__link">Support Center</a>
+        </li>
+        <li>
+          <a href="#" class="footer__link">Customer Support</a>
+        </li>
+        <li>
+          <a href="#" class="footer__link">About Us</a>
+        </li>
+        <li>
+          <a href="#" class="footer__link">Copy Right</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__content">
+      <h3 class="footer__title">Product</h3>
+
+      <ul class="footer__links">
+        <li>
+          <a href="#" class="footer__link">Hoodies</a>
+        </li>
+        <li>
+          <a href="#" class="footer__link">Shirts</a>
+        </li>
+        <li>
+          <a href="#" class="footer__link">Sweatshirts</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__content">
+      <h3 class="footer__title">Social</h3>
+
+      <ul class="footer__social">
+        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+          <i class="bx bxl-facebook bx-lg"></i>
+        </a>
+
+        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+          <i class="bx bxl-twitter bx-lg"></i>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+          <i class="bx bxl-instagram bx-lg"></i>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <span class="footer__copy">© ACADEMLO. All rigths reserved</span>
+</footer>
+
+    <!--========== Logo Academlo con contorno ==========-->
+     
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48">
+        <title>Academlo Logo</title>
+        <g>
+            <g>
+                <path
+                d="M24.45,56.48,0,42.36V14.12L24.46,0,48.92,14.12V42.36ZM1.89,41.26l22.56,13L47,41.26v-26l-22.56-13-22.56,13Z">
+                </path>
+                <path
+                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                </path>
+            </g>
+        </g>
+    </svg> -->
+  
+
+    <!--=========== Logo Academlo sin contorno ==========-->
+    
+    
+   <script src="./assets/js/main.js"></script> 
+</body>
+</html>
