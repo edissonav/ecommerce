@@ -92,30 +92,30 @@ const showProducts =() => {
     cartFunctionality()
 }
 
-
+const carrito=[]
 const cartFunctionality= ()=>{
   
   const btns= document.querySelectorAll(".add")
-  const cart=[]
+  
   btns.forEach(button=> {
     button.addEventListener("click", e => {
        const id= parseInt(e.target.parentElement.id);
        const selectedProduct= items.find(item => item.id === id)
        
-       let index= cart.indexOf(selectedProduct)
+       let index= carrito.indexOf(selectedProduct)
 
        if(index !== -1){
-        if(cart[index].quantity <= cart[index].cantidad){
+        if(carrito[index].quantity <= carrito[index].cantidad){
           alert("No hay stock")
         }else{
-          cart[index].cantidad++
+          carrito[index].cantidad++
         }
         
        }else{
         selectedProduct.cantidad=1
-        cart.push(selectedProduct)
+        carrito.push(selectedProduct)
        }
-       showProductsinCart(cart)
+       showProductsinCart(carrito)
     })
 
    
@@ -127,10 +127,10 @@ const cartFunctionality= ()=>{
 }
 
 const eliminardelcarrito= (prodId)=>{
-  const item= cart.find((prod) => prod.id === prodId)
-  const indice= cart.indexOf(item)
-  cart.splice(indice, 1)
-
+  const item= carrito.find((prod) => prod.id === prodId)
+  const indice= carrito.indexOf(item)
+  carrito.splice(indice, 1)
+  console.log(prodId);
   showProductsinCart()
 }
 
@@ -145,7 +145,7 @@ const showProductsinCart=(cart)=>{
 
  
  let fragmentodecod =``
-  cart.forEach(producto => {
+  carrito.forEach(producto => {
     fragmentodecod += `<div class="producto-dentro" id="${producto.id}">
     <img src="./${producto.image}" alt="">
     <div class= "product-information-inside">
